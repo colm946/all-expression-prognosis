@@ -10,7 +10,7 @@ df = pd.read_csv(sample_sheet_path, sep="\t", comment="#")
 def check_files():
     for file_id in df["File ID"]:
         try:
-            file = raw_data.find(file_id)
+            raw_data.find(file_id)
         except:
             return f"File not found - id: {file_id}"
 
